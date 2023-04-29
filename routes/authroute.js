@@ -10,12 +10,12 @@ app.get("/", (req, res) => {
   });
 });
   
-app.get("/getuser", (req, res) => {
+app.get("/auth/getuser", (req, res) => {
     console.log(req.session.user)
     res.status(200).send(req.session.user);
 });
 
-app.post('/login', async (req, res) => {
+app.post('/auth/login', async (req, res) => {
     const email=req.body.email
   const password = req.body.password
   let hashedPassword = await bcrypt.hashSync(password, 10);
@@ -35,12 +35,12 @@ app.post('/login', async (req, res) => {
   
 })
 
-app.delete('/logout', function(req, res){
+app.delete('/auth/logout', function(req, res){
 	req.session.destroy();
 	return res.status(200).send({message: 'LOGOUT_SUCCESS'});
   });
   
-app.post('/signup', async(req, res)=>{
+app.post('/auth/signup', async(req, res)=>{
   
   const name = req.body.name
   const email=req.body.email
