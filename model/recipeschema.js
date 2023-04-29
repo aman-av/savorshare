@@ -6,13 +6,13 @@ const recipes = new Schema({
         type:String
     },
     ingredients: {
-        type: String
+        type: Array
     },
     userid: {
         type: String
     },
     cookingsteps: {
-        type:String
+        type:Array
     },
     photos: {
         type:Array
