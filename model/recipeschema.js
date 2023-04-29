@@ -12,7 +12,7 @@ const recipes = new Schema({
         type: String
     },
     cookingsteps: {
-        type:Array
+        type:String
     },
     photos: {
         type:Array
