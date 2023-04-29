@@ -65,6 +65,7 @@ app.get('/', (req, res) => {
 
 require('./routes/authroute')(app);
 require('./routes/reciperoute')(app);
+require('./routes/blogroute')(app);
 
 let port = process.env.PORT || 8000
 			app.listen(port);

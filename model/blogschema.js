@@ -1,30 +1,18 @@
 const mongoose = require("mongoose");
 const {Schema} =  mongoose;
 
-const recipes = new Schema({
-    title:{
-        type:String
-    },
-    ingredients: {
-        type: String
-    },
-    userid: {
-        type: String
-    },
-    cookingsteps: {
+const blogs = new Schema({
+    title: {
         type:String
     },
     photos: {
         type:Array
     },
-    typeofcuisine: {
+    description: {
         type:String
     },
-    mealtype: {
-        type:String
-    },
-    restriction: {
-        type:Array
+    userid: {
+        type: String
     },
     date: {
         type:Date
@@ -40,4 +28,4 @@ const recipes = new Schema({
     }
 });
 
-mongoose.model('recipes',recipes);
+mongoose.model('blogs',blogs);

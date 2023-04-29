@@ -26,7 +26,8 @@ app.post('/auth/login', async (req, res) => {
   if(user)
   auth =await bcrypt.compareSync(req.body.password, user["password"]);
   if (auth) {
-    delete user['password'];
+    user['password']='';
+   
       var redir = { redirect: "/", message: "login successfull", user: user };	
     req.session.user = user;
     return res.status(200).send(redir);
@@ -76,10 +77,11 @@ app.post('/auth/signup', async(req, res)=>{
           id:response._id,
           name:name
       }
+      response['id'] = response._id;
       
       req.session.user = sessionuser;
-
-      var redir = { redirect: "/", message:"New user Created", user: sessionuser};
+      response['password']=''
+      var redir = { redirect: "/", message:"New user Created", user: response};
       return res.status(200).send(redir);
     }
 });
