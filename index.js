@@ -50,11 +50,7 @@ app.use(
 );
 app.use(bodyParser.json());
 app.use(
-	  	cors({
-			    origin: ["http://localhost:3000",'https://savorshare.vercel.app/','http://savorshare-hv3usqgvl-vishalbrdr.vercel.app'], 
-		    	methods: [ "GET", "POST","DELETE" ],
-		    	credentials: true,
-		  	})
+	  	cors()
 		); 
 
 app.get('/', (req, res) => {

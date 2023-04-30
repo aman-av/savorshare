@@ -17,7 +17,7 @@ module.exports = (app) => {
                 photos: retobj.photos,
                 typeofcuisine: retobj.typeofcuisine,
                 mealtype: retobj.mealtype,
-                restriction: ["milk", "peanuts"],
+                restriction: retobj.restriction,
                 date: new Date(),
                 comments: [],
                 likes: [],

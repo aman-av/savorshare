@@ -18,7 +18,7 @@ const blogs = new Schema({
         type:Date
     },
     comments: {
-        type:Array
+        type: Array
     },
     likes: {
         type:Array
