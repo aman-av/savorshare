@@ -6,16 +6,16 @@ const recipes = new Schema({
         type:String
     },
     ingredients: {
-        type: Array
+        type: String
     },
     userid: {
         type: String
     },
     cookingsteps: {
-        type:String
+        type:Array
     },
     photos: {
-        type:Array
+        type:Object
     },
     typeofcuisine: {
         type:String
