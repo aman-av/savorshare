@@ -6,7 +6,7 @@ const blogs = new Schema({
         type:String
     },
     photos: {
-        type:Array
+        type:Object
     },
     description: {
         type:String
